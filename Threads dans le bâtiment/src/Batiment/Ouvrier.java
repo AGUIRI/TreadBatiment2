@@ -9,9 +9,9 @@ package Batiment;
  *
  * @author raguiri
  */
-public class Ouvrier {
+public class Ouvrier extends Thread {
 
-    public static void main (String[]args){
+    public static void main (String[]args) throws InterruptedException{
         Electricien E1= new Electricien();
         Electricien E2= new Electricien();
         Electricien E3= new Electricien();
@@ -22,6 +22,8 @@ public class Ouvrier {
         E3.travailler();
         P1.travailler();
         P2.travailler();
-        System.out.println("Tout le monde a fini");
+        System.out.println("Tous les ouvriers ont fini leur travail");
     }
+
+    
 }

@@ -5,6 +5,8 @@
  */
 package Batiment;
 
+import static java.lang.Thread.*;
+
 /**
  *
  * @author raguiri
@@ -13,14 +15,15 @@ public class Platrier extends Ouvrier {
     private String name;
     private String profession;
 
-    public void travailler() {
+    public void travailler() throws InterruptedException {
         for (int i=0;i<10;i++){
             System.out.println("je suis"+getName()+"je travaille comme"+getProfession()+"et je commence à travailler");
+            sleep(10000);
         }
         System.out.println("je suis"+getName()+"je travaille comme"+getProfession()+"et j'ai fini mon travail");
     }
    
-
+    
     private String getName() {
         return name;
     }
