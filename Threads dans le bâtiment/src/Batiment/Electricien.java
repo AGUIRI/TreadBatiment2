@@ -17,19 +17,13 @@ public class Electricien extends Ouvrier {
 
     public void travailler() throws InterruptedException {
         for (int i=0;i<10;i++){
-            System.out.println("je suis"+getName()+"je travaille comme"+getProfession()+"et je commence à travailler");
+            System.out.println("je suis" +name+ "je travaille comme" +profession+ "et je commence à travailler");
             sleep(5000);
         }
-        System.out.println("je suis"+getName()+"je travaille comme"+getProfession()+"et j'ai fini mon travail");
+        System.out.println("je suis" +name+ "je travaille comme" +profession+ "et j'ai fini mon travail");
     }
    
-    
-    private String getName() {
-        return name;
-    }
+   
 
-    private String getProfession() {
-        return profession;
-    }
   
 }

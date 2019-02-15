@@ -5,13 +5,24 @@
  */
 package Batiment;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author raguiri
  */
-public class Ouvrier extends Thread {
-
-  
-
+public abstract  class Ouvrier extends Thread {
     
+      public void run()  {
+          try {
+              travailler();
+          } catch (Exception ex) {
+              Logger.getLogger(Ouvrier.class.getName()).log(Level.SEVERE, null, ex);
+          }
+      }
+    
+      abstract void travailler()throws Exception;
+    
+
 }
